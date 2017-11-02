@@ -39,7 +39,7 @@
    import budgetTable from './budgetTable.vue'
    import page from './page.vue'
    import date from './date.vue'
-   import api from '../api/apis.js'
+   //import api from '../api/apis.js'
    export default{
    	    data(){
    	    	return{
@@ -72,7 +72,7 @@
                }else if($(this).children("a")[0].innerText === "已审核"){
                      StatusNum=7
                }else{
-                  api.login.indexUserList("/budget/budgetList").then((response) => {
+                 /* api.login.indexUserList("/budget/budgetList").then((response) => {
 
                         // console.log(response)
 
@@ -100,11 +100,11 @@
                        _this.$store.state.BudgetYear=response.body.data.list
 
                        // console.log(response)
-                  })
+                  })*/
                    
                }
 
-              api.login.tableList({status:StatusNum}).then( (responese) => {
+              /*api.login.tableList({status:StatusNum}).then( (responese) => {
                   $.each(responese.body.data.list,function(index, el) {
                       el.STATUS=_this.Status[el.STATUS]
                       this.PATHS=el.PATHS.split('>')
@@ -127,7 +127,7 @@
                   });
                   _this.$store.state.BudgetYear=responese.body.data.list
               }, (err) => {
-              })
+              })*/
 
           });
         },

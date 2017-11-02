@@ -35,7 +35,7 @@
             console.log(username)
             console.log(posswld)
 
-   	 		  		 this.$http.get("http://10.39.137.105:8080/didiopms/confirmUser.do?username="+username+"&userpwd="+posswld+"").then(response => {
+   	 		  		 /*this.$http.get("http://10.39.137.105:8080/didiopms/confirmUser.do?username="+username+"&userpwd="+posswld+"").then(response => {
                                 console.log(response)
 
                                 this.$router.push('/home')
@@ -52,7 +52,7 @@
 				    }, response => {
 
 						console.log(response)
-					});
+					});*/
 			    }
 	       // }
 

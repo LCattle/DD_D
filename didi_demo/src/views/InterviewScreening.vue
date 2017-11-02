@@ -129,7 +129,7 @@
   import puliceCatalog from "../components/puliceCatalog.vue"
   import InterviewSearch from "../components/InterviewSearch.vue"
   import VueTree from "../components/vueTree.vue"
-  import api from "../api/apis.js"
+ // import api from "../api/apis.js"
   export default{
   	 data(){
   	 	return{
@@ -215,10 +215,10 @@
                      return
                 }else{
                    console.log(111)
-                   api.setting.getInterviewDatails({needsCvId:"1"}).then( (response) => {
+                   /*api.setting.getInterviewDatails({needsCvId:"1"}).then( (response) => {
                         console.log(response)
               
-                   })
+                   })*/
                   // _then.dispatch("setAjax","cvdb/listNeedsCvdbDetails.do?needsCvId=1")
                    _this.push("/interview/InterviewResumeDetails")
 

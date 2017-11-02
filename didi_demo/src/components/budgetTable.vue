@@ -32,7 +32,7 @@
   </div>
 </template>
 <script>
-   import api from "../api/apis.js"
+  // import api from "../api/apis.js"
    export default {
         data(){
            return{
@@ -44,7 +44,7 @@
         },
         methods:{
            budgetseeData(e){ 
-               if($(e.target).val() == this.$data.SHZoperationBtn[0]){
+               /*if($(e.target).val() == this.$data.SHZoperationBtn[0]){
                       var status=$(e.target).parent().attr("status")
                       this.$router.push("/budget/budgetList/seeData")
                       api.setting.getBudgetDetail({id:status}).then((response) => {
@@ -57,7 +57,7 @@
 
                       })
                }
-
+*/
            }
         },
         props:["tableTitle","tableBody"],

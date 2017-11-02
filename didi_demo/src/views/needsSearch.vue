@@ -27,7 +27,7 @@
    import tables from '../components/tables.vue'
    import seeData from '../components/seeData.vue'
    import needsTitle from '../components/needsTitle.vue'
-    import api from '../api/apis.js'
+    //import api from '../api/apis.js'
    export default{
     data(){
         return{
@@ -84,7 +84,7 @@
              }
 
              if($(this).children()[0].innerText==than.tabs[0]){
-                api.login.indexUserList("/cvdb/listCvdbScreening").then((response) => {
+                /*api.login.indexUserList("/cvdb/listCvdbScreening").then((response) => {
                     $.each(response.body.data.list,function(index, el) {
                     el.STATUS=than.Status[el.STATUS]
                     this.PATHS=el.PATHS.split('>')
@@ -95,12 +95,12 @@
                       }
                 });
                       _this.$store.state.NeedsSearch=response.body.data.list 
-                })
+                })*/
 
              }
              
               var stat={stat:state}
-              api.setting.getNeedsTitleList(stat).then( (response) => {
+             /* api.setting.getNeedsTitleList(stat).then( (response) => {
                   $.each(response.body.data.list,function(index, el) {
                     el.STATUS=than.Status[el.STATUS]
                     this.PATHS=el.PATHS.split('>')
@@ -116,7 +116,7 @@
 
                  // console.log( _this.$store.state.NeedsSearch) 
 
-              })
+              })*/
         });
     },
     components:{

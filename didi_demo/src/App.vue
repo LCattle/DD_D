@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <slideNav></slideNav>
+   <slideNav></slideNav>
     <div class="contents" >
        <keep-alive>
             <router-view></router-view>
@@ -11,7 +11,7 @@
 
 <script>
 import slideNav from './components/slideNav.vue'
-import api from './api/apis.js'
+//import api from './api/apis.js'
 import Store from 'store'
 export default {
     name: 'app',
@@ -33,12 +33,12 @@ export default {
             username:"zhugeliang",
             userpwd:"123456",
         }
-        api.login.confirmUser(params).then((response) => {
+        /*api.login.confirmUser(params).then((response) => {
             var state=response.body.state
 
             console.log(response)
             if(state =='0000'){
-                /*存储seesion*/
+                //存储seesion
                 Store.set("Access-Token",response.body.data);
                 
                 // this.$router.push({path:"/home"})
@@ -55,7 +55,7 @@ export default {
        }, (err) => {
         
           console.log(err)
-       })
+       })*/
 
     }
   }

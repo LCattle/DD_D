@@ -5,13 +5,13 @@
 		   	    <div class="logo">
 		   	    </div>
 	   	        <ul class="leftnav">
-	   	     	    <li v-for="(nav,index) in navData" class="leftnav_list">
+	   	     	    <li v-for="(nav,index) in navData" class="leftnav_list" :key="index">
 	   	     		    <img :src="nav.image"/>
 	   	     		    <a href="javascript:void(0)" class>{{nav.title}} 
 	   	     		    	<span class="nav_arrow_left" v-if="index>0"></span>
 	   	     		    </a>
 	   	     		    <ul>
-	   	     				<li v-for="childs in nav.list" class="slideList">
+	   	     				<li v-for="(childs, idx) in nav.list" class="slideList" :key="idx">
 	   	     					<router-link  :to="{path:childs.path}" >
 	   	     						{{childs.chil}}
 	   	     					</router-link>
@@ -26,7 +26,7 @@
 </template>
 <script>
 	import stateNav from './stateNav.vue'
-	import api from '../api/apis.js'
+	//import api from '../api/apis.js'
 	export default {
 		data(){
 			return{
@@ -163,7 +163,7 @@
                 /*侧边栏请求*/
 
                 
-                api.login.indexUserList(beseUrl).then((response) => {
+               /* api.login.indexUserList(beseUrl).then((response) => {
                 	 console.log(response.data)
          
                 	$.each(response.body.data.list,function(index, el) {
@@ -215,7 +215,7 @@
 	           	    console.log(err)
 	            }
 
-		    )
+		    )*/
 		})
 	}
 }

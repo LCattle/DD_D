@@ -23,9 +23,9 @@ const resumeDetailsdetails  = resolve => require(['@/components/resumeDetailsdet
 const viewForm  = resolve => require(['@/components/viewForm.vue'],resolve)
 const needSeeData  = resolve => require(['@/components/needSeeData.vue'],resolve)
 
+//import Test from './../views/test.vue'
 
-
-
+const Test  = resolve => require(['@/views/test.vue'],resolve)
 
 
 
@@ -37,6 +37,10 @@ export default new Router({
     {
       path: '/login',
       component: login,
+    },
+    {
+      path: '/test',
+      component: Test,
     },
     {
       path: '/home',
